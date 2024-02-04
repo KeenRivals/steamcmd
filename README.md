@@ -1,7 +1,4 @@
-[![](https://img.shields.io/codacy/grade/6a8e207cf98246169e633d6f22da9d9c)](https://hub.docker.com/r/cm2network/steamcmd/) [![Docker Build Status](https://img.shields.io/docker/cloud/build/cm2network/steamcmd.svg)](https://hub.docker.com/r/cm2network/steamcmd/) [![Docker Stars](https://img.shields.io/docker/stars/cm2network/steamcmd.svg)](https://hub.docker.com/r/cm2network/steamcmd/) [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/steamcmd.svg)](https://hub.docker.com/r/cm2network/steamcmd/) [![](https://img.shields.io/docker/image-size/cm2network/steamcmd)](https://img.shields.io/docker/image-size/cm2network/steamcmd) [![Discord](https://img.shields.io/discord/747067734029893653)](https://discord.gg/7ntmAwM)
-# Supported tags and respective `Dockerfile` links
-  -	[`steam`, `latest`  (*bookworm/Dockerfile*)](https://github.com/CM2Walki/steamcmd/blob/master/bookworm/Dockerfile)
-  -	[`root`  (*bookworm/Dockerfile*)](https://github.com/CM2Walki/steamcmd/blob/master/bookworm/Dockerfile)
+Fork of SteamCMD based on Debian Bookworm.
 
 # What is SteamCMD?
 The Steam Console Client or SteamCMD is a command-line version of the Steam client. Its primary use is to install and update various dedicated servers available on Steam using a command-line interface. It works with games that use the SteamPipe content system. All games have been migrated from the deprecated HLDSUpdateTool to SteamCMD. This image can be used as a base image for Steam-based dedicated servers (Source: [developer.valvesoftware.com](https://developer.valvesoftware.com/wiki/SteamCMD)).
@@ -32,20 +29,6 @@ This image includes the `nano` text editor for convenience.
 
 The `steamcmd.sh` can be found in the following directory: `/home/steam/steamcmd`
 
-## Examples
-Images utilizing this base image:
-
-| Image  | Pulls | Build Status |
-| ------------- | ------------- | ------------- |
-| [cm2network/cs2](https://hub.docker.com/r/cm2network/cs2/) | [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/cs2.svg)](https://hub.docker.com/r/cm2network/cs2/) | [![Docker Build Status](https://img.shields.io/docker/cloud/build/cm2network/cs2)](https://hub.docker.com/r/cm2network/cs2/) |
-| [cm2network/csgo](https://hub.docker.com/r/cm2network/csgo/) | [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/csgo.svg)](https://hub.docker.com/r/cm2network/csgo/) | [![Docker Build Status](https://img.shields.io/docker/cloud/build/cm2network/csgo)](https://hub.docker.com/r/cm2network/csgo/) |
-| [cm2network/tf2](https://hub.docker.com/r/cm2network/tf2/) | [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/tf2.svg)](https://hub.docker.com/r/cm2network/tf2/) | [![Docker Build Status](https://img.shields.io/docker/cloud/build/cm2network/tf2.svg)](https://hub.docker.com/r/cm2network/tf2/) |
-| [cm2network/squad](https://hub.docker.com/r/cm2network/squad/) | [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/squad.svg)](https://hub.docker.com/r/cm2network/squad/) | [![Docker Build Status](https://img.shields.io/docker/cloud/build/cm2network/squad.svg)](https://hub.docker.com/r/cm2network/squad/) |
-| [cm2network/mordhau](https://hub.docker.com/r/cm2network/mordhau/) | [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/mordhau.svg)](https://hub.docker.com/r/cm2network/mordhau/) | [![Docker Build Status](https://img.shields.io/docker/cloud/build/cm2network/mordhau.svg)](https://hub.docker.com/r/cm2network/mordhau/) |
-| [cm2network/holdfastnaw](https://hub.docker.com/r/cm2network/holdfastnaw/) | [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/holdfastnaw.svg)](https://hub.docker.com/r/cm2network/holdfastnaw/) | [![Docker Build Status](https://img.shields.io/docker/cloud/build/cm2network/holdfastnaw.svg)](https://hub.docker.com/r/cm2network/holdfastnaw/) |
-| [cm2network/valheim](https://hub.docker.com/r/cm2network/valheim/) | [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/valheim.svg)](https://hub.docker.com/r/cm2network/valheim/) | [![Docker Build Status](https://img.shields.io/docker/cloud/build/cm2network/valheim.svg)](https://hub.docker.com/r/cm2network/valheim/) |
-| [cm2network/steampipe](https://hub.docker.com/r/cm2network/steampipe/) | [![Docker Pulls](https://img.shields.io/docker/pulls/cm2network/steampipe.svg)](https://hub.docker.com/r/cm2network/steampipe/) | [![Docker Build Status](https://img.shields.io/docker/cloud/build/cm2network/steampipe.svg)](https://hub.docker.com/r/cm2network/steampipe/) |
-
 # Image Variants
 The `steamcmd` images come in two flavors, each designed for a specific use case.
 
@@ -56,6 +39,3 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 This is a specialized image. This image's default user is `root`. If you need to install additional packages for you game server and do not want to create excess layers, then this is the right choice.
 
 _Note: Running the `steamcmd.sh` as `root` will fail because the owner is the user `steam`, either swap the active user using `su steam` or use chown to change the ownership of the directory._
-
-# Contributors
-[![Contributors Display](https://badges.pufler.dev/contributors/CM2Walki/steamcmd?size=50&padding=5&bots=false)](https://github.com/CM2Walki/steamcmd/graphs/contributors)
